@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <script src="./dropzone.min.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body>
+    <div class="row">   
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-12 mx-auto">
+                    <form action="/file-upload" class="dropzone" id="dropzone">
+                        <div class="dz-message needsclick">
+                            <img src="./upload.png" width="50vw" height="50vw"><br>
+                            <span class="note needsclick">Drop files here or click to upload</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3 mx-auto">
+                    <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    <div class="col-sm-8 error" id="error" >
+            <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+        </div>
+
+        <div id="resultHolder">
+        </div>
+        <div class="col-sm-4" id="divClassTable">
+            </div>
+
+</body>
+</html>
